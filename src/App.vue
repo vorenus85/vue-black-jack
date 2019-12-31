@@ -1,17 +1,104 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button @click="generateCardDeck">Generate card deck</button>
+    <br>
+    <pre>
+      {{ cardDeck }}
+    </pre>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data: () => ({
+      cardDeck: [],
+      cardColors: [
+        {
+          color: 'clubs',
+        },
+        {
+          color: 'diamonds',
+        },
+        {
+          color: 'hearts',
+        },
+        {
+          color: 'spades',
+        }
+      ],
+      cardNumbers: [
+        {
+          symbol: 'ace',
+          score: 10
+        },
+        {
+          symbol: 'king',
+          score: 10
+        },
+        {
+          symbol: 'queen',
+          score: 10
+        },
+        {
+          symbol: 'jack',
+          score: 10
+        },
+        {
+          symbol: 'ten',
+          score: 10
+        },
+        {
+          symbol: 'nine',
+          score: 9
+        },
+        {
+          symbol: 'eight',
+          score: 8
+        },
+        {
+          symbol: 'seven',
+          score: 7
+        },
+        {
+          symbol: 'six',
+          score: 6
+        },
+        {
+          symbol: 'five',
+          score: 5
+        },
+        {
+          symbol: 'four',
+          score: 4
+        },
+        {
+          symbol: 'three',
+          score: 3
+        },
+        {
+          symbol: 'two',
+          score: 2
+        }
+      ]
+  }),
+  methods: {
+    generateCardDeck: function () {
+      let cardColors = this.cardColors;
+      let cardNumbers = this.cardNumbers;
+      let c,n;
+
+      for (c in cardColors) {
+        let color = cardColors[c];
+        for (n in cardNumbers) {
+          let number = cardNumbers[n];
+          let cardDeckItem = {};
+          cardDeckItem = Object.assign(cardDeckItem, number,color);
+          this.cardDeck.push(cardDeckItem)
+        }
+      }
+    }
   }
 }
 </script>
