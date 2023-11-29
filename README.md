@@ -22,3 +22,7 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Rules of Black Jack
+https://bicyclecards.com/how-to-play/blackjack
+
