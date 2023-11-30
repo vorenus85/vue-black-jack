@@ -52,7 +52,8 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "vue/multi-word-component-names": "off"
     },
     "overrides": [
       {

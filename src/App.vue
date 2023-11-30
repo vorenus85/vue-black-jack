@@ -1,16 +1,21 @@
 <template lang="pug">
 div
   img(alt="Vue logo" src="./assets/logo.png")
-  HelloWorld(msg="Welcome to Your Vue.js App")
+  Split(@split="handleSplit")
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld.vue';
+  import Split from './components/Split.vue';
 
   export default {
     name: 'App',
     components: {
-      HelloWorld,
+      Split,
+    },
+    methods: {
+      handleSplit() {
+        console.log('handleSplit');
+      },
     },
   };
 </script>
