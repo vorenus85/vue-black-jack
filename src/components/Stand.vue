@@ -1,10 +1,10 @@
 <template lang="pug">
-BJButton.split-btn(@click="$emit('split')") Split
+BJButton.stand-btn(@click="$emit('stand')") Stand
 </template>
 <script>
   import BJButton from './BJButton.vue';
   export default {
-    name: 'split',
+    name: 'stand',
     components: { BJButton },
   };
 </script>

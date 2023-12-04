@@ -1,10 +1,10 @@
 <template lang="pug">
-BJButton.split-btn(@click="$emit('split')") Split
+BJButton.hit-btn(@click="$emit('hit')") Hit
 </template>
 <script>
   import BJButton from './BJButton.vue';
   export default {
-    name: 'split',
+    name: 'hit',
     components: { BJButton },
   };
 </script>
